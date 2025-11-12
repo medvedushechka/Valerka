@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Интерактивное поздравление с днём рождения">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>С Днём Рождения!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginScreen" class="screen active">
+        <div class="login-container">
+            <h1>🎉 Поздравление с Днём Рождения! 🎉</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate">Дата рождения (дд.мм.гггг):</label>
+                    <input type="text" id="birthdate" placeholder="01.01.2000" required>
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <h2>Лопни все шарики! 🎈</h2>
+            <div class="balloons-container" id="balloonsContainer">
+                <!-- Шарики будут добавлены через JavaScript -->
+            </div>
+            <div class="counter">
+                <span>Осталось шариков: <span id="balloonCount">20</span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="celebrationScreen" class="screen">
+        <div class="celebration-container">
+            <h1>🎊 Поздравляем! 🎊</h1>
+            <div class="wishes-spacer"></div>
+            <ul id="wishesContainer" class="wishes-container">
+                <!-- Поздравления будут добавлены через JavaScript -->
+            </ul>
+            <button id="readButton" class="read-button" style="display: none;">
+                Прочитал 📖
+            </button>
+            <div id="photoContainer" class="photo-container" style="display: none;">
+                <!-- Фото именинника -->
+            </div>
+        </div>
+        <div class="confetti-container" id="confettiContainer">
+            <!-- Конфетти -->
+        </div>
+        <div class="floating-balloons" id="floatingBalloons">
+            <!-- Поднимающиеся шарики -->
+        </div>
+    </div>
+
+    <div id="countdownScreen" class="countdown-screen">
+        <div class="countdown-message">А чего это мы расслабляемся, за работу!!!!</div>
+        <div class="countdown-number" id="countdownNumber">5</div>
+    </div>
+
+    <audio id="birthdaySong" preload="auto" loop>
+        <source src="happy-birthday.mp3" type="audio/mpeg">
+        <source src="happy-birthday.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
